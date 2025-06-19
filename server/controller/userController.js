@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 import User from "../model/userModel.js";
@@ -833,7 +833,7 @@ const workoutPrograms = {
         }
       ]
     }
-    // ...existing code for advanced gym, etc...
+    // ...rest of the code...
   },
   // ADVANCED GYM WORKOUTS
   // 1x per week
