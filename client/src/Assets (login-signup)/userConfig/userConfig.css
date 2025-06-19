@@ -1,0 +1,287 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(20, 40, 80, 0.95);
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.welcome-text {
+    font-size: 24px;
+    color: #ffffff; /* Ensure logo text is white */
+    font-weight: bold;
+}
+
+.welcome-text span {
+    color: #4da6ff; /* Keep the span color as it is */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-buttons button {
+    background: #4da6ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-buttons button:hover {
+    background: #3385ff;
+}
+
+/* Base styles matching app.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://plus.unsplash.com/premium_photo-1661301057249-bd008eebd06a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+/* Updated profile containers */
+.profile-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    z-index: 1010;
+    justify-content: center; /* Add this */
+}
+
+.profile-details-container {
+    position: fixed;
+    top: 120px; /* Increased from 80px to move it lower */
+    left: 0;
+    width: 300px;
+    height: calc(100vh - 120px); /* Adjusted to account for new top position */
+    background: rgba(3, 13, 35, 0.95);
+    border-radius: 0 15px 15px 0;
+    padding: 30px;
+    overflow-y: auto;
+    z-index: 1011;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #003366;
+}
+
+.profile-update-container {
+    flex: none; /* Change from flex: 1 */
+    width: 600px; /* Add fixed width */
+    margin: 20px auto; /* Center horizontally */
+    margin-left: calc(300px + 30px); /* Account for sidebar width + spacing */
+    background: rgba(3, 13, 35, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    z-index: 1011;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-right: 400px;
+    margin-top: 120px;
+}
+.success-message {
+    background-color: #28a745; /* Green highlight */
+    color: white; /* White font */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  .error-message {
+    background-color: #dc3545; /* Red highlight */
+    color: white; /* White font */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+/* Form styling */
+.form-group {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: 0.3s;
+    border: 1px solid transparent;
+    margin-bottom: 15px;
+}
+
+.form-group:hover,
+.form-group:focus-within {
+    border: 1px solid #00a6ff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.form-group label {
+    flex: 0 0 120px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.form-group input::placeholder {
+    color: #8a9ab5;
+}
+
+/* Button styling */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.btn {
+    flex: 1;
+    padding: 14px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(45deg, #003366, #0055aa);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    border-color: #00a6ff;
+    box-shadow: 0 4px 10px rgba(0, 166, 255, 0.3);
+}
+.BMI-Progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(3, 13, 35, 0.95);
+    border-radius: 15px;
+    width: 100%;
+}
+.BMIprogress-container{
+    width: 100%;
+    height: 300px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    text-align: left;
+
+    position: relative;
+}
+
+/* Right sidebar styles */
+.right-sidebar {
+  margin-top: 125px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background-color: rgba(3, 13, 35, 0.95);
+  color: #fff;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 15px 0 0 15px; /* Rounded top-left and bottom-left corners */
+}
+
+.right-sidebar h3 {
+  text-align: center;
+  color: #fff;
+}
+
+.right-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.right-sidebar li {
+  margin-bottom: 10px;
+}
+
+.right-sidebar button {
+  width: 100%;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.right-sidebar button:hover {
+  background-color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .profile-details-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        margin: 20px;
+    }
+
+    .profile-update-container {
+        width: 90%; /* Make it responsive */
+        margin: 20px auto; /* Center on mobile */
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        margin-bottom: 10px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .nav-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+}

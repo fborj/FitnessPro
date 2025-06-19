@@ -1,0 +1,284 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #0f0c29;
+  color: white;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: #1f2937;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #f97316;
+}
+
+.joinBtn {
+  background: transparent;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.joinBtn:hover {
+  background: white;
+  color: orange;
+}
+
+.hero {
+  height: 100vh;
+  background: url("https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+}
+
+.heroContent {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 600px;
+}
+
+.heroBadge {
+  background: white;
+  color: #1e3a8a;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  line-height: 1.4;
+}
+
+.heroTitle .highlight {
+  color: #f97316;
+}
+
+.heroDescription {
+  margin: 1rem 0 2rem 0;
+  font-size: 1.1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.getStarted, .learnMore {
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.getStarted {
+  background-color: #f97316;
+  border: none;
+  color: white;
+}
+
+.getStarted:hover {
+  background: white;
+  color: orange;
+}
+
+.learnMore {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#programs {
+  min-height: 50vh;
+}
+
+#why-us {
+  min-height: 50vh;
+}
+
+.section.dark {
+  background-color: #1f2937;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card, .pricingCard {
+  background: #2d3748;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 350px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover,
+.pricingCard:hover {
+  background-color: #f97316;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.highlightCard {
+  background: #f97316;
+  color: white;
+}
+
+.pricingCard ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.testimonial {
+  font-size: 1.2rem;
+  font-style: italic;
+  max-width: 600px;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+/* Popup Modal Styling */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popupBox {
+  background-color: #1f2937;
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  position: relative;
+  animation: popIn 0.3s ease;
+  z-index: 10000;
+}
+
+.popupBox h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #f97316;
+}
+
+.popupBox p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.popup-close:hover {
+  color: #f97316;
+}
+
+.blurBackground {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.blurBackground::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1648235692910-947cb90ddd97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  transform: scale(1.05); /* avoid blur edges */
+  z-index: -1;
+  opacity: 0.8;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

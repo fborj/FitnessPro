@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.dietplan-bg, html.dietplan-bg {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed !important;
+  background-size: cover !important;
+}
+
+.navbar {
+  background: #183153;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  font-size: 1.2rem;
+}
+
+.navbar .brand {
+  color: #61dafb;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.navbar li:hover {
+  color: #61dafb;
+}
+
+.title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #183153;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.food-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #183153;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.food-table th, .food-table td {
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid #222;
+  font-size: 1.1rem;
+}
+
+.food-table th {
+  background: #3a4a6b;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.food-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Make the font color of the calorie tracker modal's text navy blue */
+.calorie-modal-list, .calorie-modal-list li {
+  color: navy !important;
+} 

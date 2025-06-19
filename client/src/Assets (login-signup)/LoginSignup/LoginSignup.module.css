@@ -1,0 +1,266 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://plus.unsplash.com/premium_photo-1661301057249-bd008eebd06a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+/*body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 13, 35, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 0;
+}*/
+
+.mainContainer {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 650px;
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    margin: 120px auto 0 auto;
+}
+
+.welcomeSection {
+    flex: 1;
+    background: linear-gradient(135deg, #004080, #001f40);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.logo {
+    width: 350px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.logoImage {
+    width: 100%;
+    height: auto;
+}
+
+.welcomeText h1 {
+    font-size: 2rem;
+    color: #4da6ff;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.welcomeText span {
+    color: #f97316;
+}
+
+.welcomeText p {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.backToHome {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #4da6ff;
+    cursor: pointer;
+}
+
+.authSection {
+    flex: 1;
+    background: rgba(3, 13, 35, 0.95);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.authBox {
+    width: 100%;
+    max-width: 400px;
+}
+
+.rightPanel {
+    text-align: center;
+}
+
+.rightPanel h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.input:hover,
+.input:focus-within {
+    border: 1px solid #00a6ff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.input img {
+    width: 22px;
+    margin-right: 10px;
+    filter: brightness(0.8);
+}
+
+.input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: none;
+    outline: none;
+}
+
+.input input::placeholder {
+    color: #8a9ab5;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.submit {
+    flex: 1;
+    padding: 14px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(45deg, #003366, #0055aa);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid transparent;
+    background-size: cover;
+    background-position: center;
+}
+
+.submit:hover {
+    transform: scale(1.05);
+    border-color: #00a6ff;
+    box-shadow: 0 4px 10px rgba(0, 166, 255, 0.3);
+}
+
+.createAccountBtn {
+    background: #4da6ff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.createAccountBtn:hover {
+    background: #3385ff;
+}
+
+.forgotPassword {
+    font-size: 14px;
+    color: #8a9ab5;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgotPassword span {
+    color: #00a6ff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.forgotPassword span:hover {
+    text-decoration: underline;
+}
+
+.switchMode {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #8a9ab5;
+}
+
+.switchMode span {
+    color: #00a6ff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .mainContainer {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+        min-height: auto;
+        margin: 20px auto;
+    }
+
+    .welcomeSection {
+        padding: 30px 20px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo span {
+        font-size: 28px;
+    }
+
+    .welcomeText h1 {
+        font-size: 22px;
+    }
+
+    .welcomeText p {
+        font-size: 14px;
+    }
+
+    .authSection {
+        padding: 20px;
+    }
+
+    .authBox {
+        padding: 0;
+    }
+}

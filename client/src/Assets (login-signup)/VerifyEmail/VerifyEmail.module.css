@@ -1,0 +1,152 @@
+.mainContainer {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  min-height: 650px;
+  position: relative;
+  z-index: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+  margin: 120px auto 0 auto;
+}
+
+.welcomeSection {
+  flex: 1;
+  background: linear-gradient(135deg, #004080, #001f40);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.logo {
+  width: 350px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.logoImage {
+  width: 100%;
+  height: auto;
+}
+
+.welcomeText h1 {
+  font-size: 2rem;
+  color: #4da6ff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.authSection {
+  flex: 1;
+  background: rgba(3, 13, 35, 0.95);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.authBox {
+  width: 100%;
+  max-width: 400px;
+}
+
+.rightPanel {
+  text-align: center;
+}
+
+.message {
+  color: white;
+  padding: 20px;
+}
+
+.message h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.message p {
+  color: #b0b8c1;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.message strong {
+  color: #4da6ff;
+  font-weight: 600;
+}
+
+.instructions {
+  font-size: 0.9rem !important;
+  color: #8a9ab5 !important;
+  font-style: italic;
+  margin-top: 10px !important;
+}
+
+.submit {
+  width: 100%;
+  padding: 14px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(45deg, #003366, #0055aa);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid transparent;
+  background-size: cover;
+  background-position: center;
+  margin-top: 25px;
+}
+
+.submit:hover {
+  transform: scale(1.05);
+  border-color: #00a6ff;
+  box-shadow: 0 4px 10px rgba(0, 166, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+    min-height: auto;
+    margin: 20px auto;
+  }
+
+  .welcomeSection,
+  .authSection {
+    padding: 30px 20px;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .welcomeText h1 {
+    font-size: 1.8rem;
+  }
+
+  .message h2 {
+    font-size: 1.5rem;
+  }
+
+  .message p {
+    font-size: 0.9rem;
+  }
+
+  .submit {
+    font-size: 16px;
+    padding: 12px;
+  }
+} 

@@ -1,0 +1,6 @@
+// ...existing code...
+function validatePassword(password) {
+    const passwordRegex = /^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+$/; // Updated regex to include special characters
+    return passwordRegex.test(password);
+}
+// ...existing code...
