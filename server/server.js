@@ -20,10 +20,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGOURL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(process.env.MONGO_URL)
+  .then(() => console.log('Connected to MongoDB Atlas!'))
+  .catch(err => {
+    console.error('MongoDB connection error:', err);
+    console.log('Connection string used:', process.env.MONGO_URL);
+    process.exit(1);
+  });
 
 // Enable detailed logging for requests
 app.use((req, res, next) => {

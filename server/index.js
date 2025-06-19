@@ -14,29 +14,34 @@ import BMIprogressRoute from './routes/BMIprogressRoute.js';
 dotenv.config();
 console.log("Environment Variables:", {
   PORT: process.env.PORT,
-  MONGOURL: process.env.MONGOURL,
+  MONGO_URL: process.env.MONGO_URL,
   JWT_SECRET: process.env.JWT_SECRET,
 }); // Debug log
-console.log("MONGO_URL:", process.env.MONGOURL); // Log the MONGO_URL to verify
+console.log("MONGO_URL:", process.env.MONGO_URL); // Log the MONGO_URL to verify
+
+// CORS configuration
+const corsOptions = {
+  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  credentials: true,
+  optionSuccessStatus: 200
+};
 
 const app = express();
-app.use(cors()); // Enable CORS once
+app.use(cors(corsOptions)); // Use CORS with options
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 8080;
-const MONGOURL = process.env.MONGOURL;
+const MONGO_URL = process.env.MONGO_URL;
 
-if (!MONGOURL) {
+if (!MONGO_URL) {
   console.error("Error: MONGO_URL is not defined in the .env file.");
   process.exit(1);
 }
 
 mongoose.set("debug", true); // Enable Mongoose debugging
 mongoose
-  .connect(MONGOURL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 5000, // Timeout after 5 seconds
+  .connect(MONGO_URL, {
+    serverSelectionTimeoutMS: 5000 // Timeout after 5 seconds
   })
   .then(() => {
     console.log("DB connected successfully.");
